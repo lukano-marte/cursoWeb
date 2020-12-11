@@ -17,7 +17,11 @@ for(let atributo in pessoa) {
 
 const forHonor = {
   cavaleiros: ['Warden', 'Peacekeeper', 'Conqueror'],
-  vikings: 'Raider',
+  vikings: {
+    heroi: 'Raider',
+    tipo: 'Vanguardeiro',
+    arma: 'Machado'
+  },
   samurais: 'Kensei',
   wuLin: 'Shaolin',
 }
