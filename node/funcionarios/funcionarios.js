@@ -4,7 +4,7 @@ const axios = require('axios')
 axios.get(url).then(response => {
   const funcionarios = response.data
   const novaArray = funcionarios.filter((funcionario) => {
-    return funcionario.pais === "China" && funcionario.genero === "F"
+    return funcionario.pais === "Brazil" && funcionario.genero === "M"
   })
 
   novaArray.sort(function (a, b) {
