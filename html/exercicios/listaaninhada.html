@@ -1,16 +1,16 @@
 <h1>Projeto</h1>
-<ul class="treee">
+<ul class="tree">
   <li>
-    Backend
+    <span wm-folder>Backend</span>
     <ul>
-      app
+      <span wm-folder>app</span>
       <ul>
         <li>produto.js</li>
         <li>usuario.js</li>
         <li>venda.js</li>
       </ul>
       <li>
-        Config
+        <span wm-folder>Config</span>
         <ul>
           <li>banco.js</li>
           <li>rotas.js</li>
@@ -20,10 +20,10 @@
     </ul>
   </li>
   <li>
-    Frontend
+    <span wm-folder>Frontend</span>
     <ul>
       <li>
-        public
+        <span wm-folder>public</span>
         <ul>
           <li>app.css</li>
           <li>app.js</li>
@@ -34,8 +34,14 @@
   </li>
 </ul>
 
-<link rel="stylesheet" href="http://files.cod3er.com.br/curso-web/tree.css">
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
 
 <script>
-  console.log('Árvore...')
+  document.querySelectorAll('[wm-folder]').forEach(folder => {
+    folder.onclick = function (e) {
+      const ul = folder.nextElementSibling
+      const display = ul.style.display
+      ul.style.display = display === 'none' ? 'block' : 'none'
+    }
+  })
 </script>
